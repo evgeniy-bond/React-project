@@ -1405,7 +1405,7 @@ hr {
 }
 
 .h1,.h2,.h3,h1,h2,h3 {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -3818,9 +3818,9 @@ select[multiple].input-group-sm > .form-control,select[multiple].input-group-sm 
   color: #9d9d9d;
 }
 
-/*.navbar-inverse .navbar-nav > li > a {
+.navbar-inverse .navbar-nav > li > a {
   color: #9d9d9d;
-}*/
+}
 
 /*.navbar-inverse .navbar-nav > li > a:focus,.navbar-inverse .navbar-nav > li > a:hover {
   color: #fff;
@@ -5160,7 +5160,6 @@ button.close {
   white-space: normal;
   filter: alpha(opacity=0);
   opacity: 0;
-  line-break: auto;
 }
 
 .tooltip.in {
@@ -5298,7 +5297,6 @@ button.close {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  line-break: auto;
 }
 
 .popover.top {
@@ -7137,5 +7135,5 @@ a:visited {
 
 .active-link {
   background-color: dimgrey!important;
-  color: white!important;
+  color: white;
 }

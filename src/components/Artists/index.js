@@ -1,49 +1,51 @@
 import React, { Component } from 'react'
+import BandCard from '../BandCard'
 
 export default class Artists extends Component {
+    constructor() {
+        super()
+
+        this.state = {
+            artists: []
+        }
+    }
+    
+    componentDidMount() {
+        fetch('./artists.json')
+            .then(response => response.json())
+            .then(data => this.setState({ artists: data }))
+            .catch(alert);
+    }
+
     render() {
+        let artists = this.state.artists;
+
+        artists = artists.map(artist => {
+            return (
+                <div className="col-xs-3" key={Math.random()}>
+                    <BandCard
+                        name={artist.artist}
+                        description={artist.description}
+                        link={`artists${artist.link}`}
+                        img={artist.img}
+                        alt={artist.alt}
+                    >
+                    </BandCard>
+                </div>
+            );
+        })
+
         return (
             <div className="col-xs-12">
                 <div className="panel panel-default panel-container">
                     <div className="panel-heading">
-                        <h1>
+                        <h3>
                             <span className="category">Artists</span>
-                        </h1>
+                        </h3>
                     </div>
                     <div className="panel-body main-container">
                         <div className="row">
-                            <div className="col-xs-4">
-                                <div className="thumbnail">
-                                    <img src="http://www.metal-archives.com/images/1/2/4/6/1246_photo.jpg" alt="..." />
-                                    <div className="caption">
-                                        <h3>Nasum</h3>
-                                        <p>Swedish Grindcore</p>
-                                        <p><a href="#" className="btn btn-primary" role="button">More</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xs-4">
-                                <div className="thumbnail">
-                                    <img src="http://www.metal-archives.com/images/1/2/4/6/1246_photo.jpg" alt="..." />
-                                    <div className="caption">
-                                        <h3>Nasum</h3>
-                                        <p>Swedish Grindcore</p>
-                                        <p><a href="#" className="btn btn-primary" role="button">More</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xs-4">
-                                <div className="thumbnail">
-                                    <img src="http://www.metal-archives.com/images/1/2/4/6/1246_photo.jpg" alt="..." />
-                                    <div className="caption">
-                                        <h3>Nasum</h3>
-                                        <p>Swedish Grindcore</p>
-                                        <p>
-                                            <a href="#" className="btn btn-primary" role="button">More</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            {artists}
                         </div>
                     </div>
                 </div>

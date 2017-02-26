@@ -6,9 +6,9 @@ export default class Albums extends Component {
             <div className="col-xs-12">
                 <div className="panel panel-default panel-container">
                     <div className="panel-heading">
-                        <h1>
+                        <h2>
                             <span className="category">Albums</span>
-                        </h1>
+                        </h2>
                     </div>
                     <div className="panel-body main-container">
                         <div className="row">
