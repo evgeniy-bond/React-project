@@ -1,19 +1,38 @@
 import React, { Component } from 'react';
 
 export default class Artist extends Component {
+    constructor() {
+        super()
+        this.state = {}
+    }
+
+    componentDidMount() {
+        fetch('/artists.json')
+            .then(response => response.json())
+            .then(data => {
+                let artist;
+                data.forEach(item => {
+                    if (item.artist.toLowerCase() == this.props.params.artist.toLowerCase() ) {
+                        artist = item;
+                        this.setState(artist)
+                    }
+                })
+            })
+            .catch(alert);
+    }
 
     render() {
         return (
             <div className='col-xs-12'>
                 <div className="row">
                     <div className="col-xs-4">
-                        <img src={this.props.params.img} alt={this.props.params.alt} className="img-responsive" />
+                        <img src={this.state.img} alt={this.state.alt} className="img-responsive" />
                     </div>
                     <div className="col-xs-8">
                         <div className="caption">
-                            <h3>{this.props.params.artist}</h3>
+                            <h3>{this.state.artist}</h3>
                             <p>
-                                {this.props.params.description}
+                                {this.state.description}
                             </p>
                         </div>
                     </div>
