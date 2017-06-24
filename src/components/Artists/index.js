@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import BandCard from '../BandCard'
 
 export default class Artists extends Component {
+    static title = 'Artists';
+    
     constructor() {
         super()
 
@@ -20,9 +22,9 @@ export default class Artists extends Component {
     render() {
         let artists = this.state.artists;
 
-        artists = artists.map(artist => {
+        artists = artists.map((artist, i) => {
             return (
-                <div className="col-xs-3" key={Math.random()}>
+                <div className="col-xs-3" key={i}>
                     <BandCard
                         name={artist.artist}
                         description={artist.description}

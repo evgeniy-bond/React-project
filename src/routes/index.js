@@ -6,6 +6,7 @@ import Main from './../components/Main'
 import Artists from './../components/Artists'
 import Artist from './../components/Artist'
 import Albums from './../components/Albums'
+import Album from './../components/Album'
 import NotFound from './../components/NotFound'
 
 export const routes = (
@@ -15,6 +16,7 @@ export const routes = (
             <Route path='artists' component={Artists}/>
             <Route path='/artists/:artist' component={Artist}/>
             <Route path='/albums' component={Albums}/>
+            <Route path='/albums/:album' component={Album}/>
         </Route>
         <Route path='*' component={NotFound}/>
     </div>

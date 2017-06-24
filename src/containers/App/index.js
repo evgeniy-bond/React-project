@@ -8,9 +8,7 @@ export default class App extends Component {
         return (
             <div className="container">
                 <Header></Header>
-                <BreadCrumbs
-                    routes={this.props.routes}
-                />
+                <BreadCrumbs routes={this.props} />
                 <div className="row">
                     {this.props.children}
                 </div>

@@ -1,7 +1,8 @@
 [
     {
         "artist": "Nasum",
-        "description": "Swedish Grindcore",
+        "album": "album 2020",
+        "year": 2020,
         "img": "http://www.metal-archives.com/images/1/2/4/6/1246_photo.jpg",
         "alt": "...",
         "link": "/nasum",
@@ -9,6 +10,7 @@
     },
     {
         "artist": "1349",
+        "album": "album 2020",
         "description": "True Norwegian Black Metal",
         "img": "http://doublefault.ru/site/17/1353.jpg",
         "alt": "...",
@@ -17,6 +19,7 @@
     },
     {
         "artist": "Necrophagist",
+        "album": "album 2020",
         "description": "Technical Death Metal",
         "img": "http://2.bp.blogspot.com/-vkPZeq9lr2w/T2bOz3UmCYI/AAAAAAAAACk/U2ITyw8_V08/s1600/Necrophagist-picture.jpg",
         "alt": "...",
@@ -25,6 +28,7 @@
     },
     {
         "artist": "Ion Dissonance",
+        "album": "album 2020",
         "description": "Mathcore",
         "img": "http://images.sk-static.com/images/media/profile_images/artists/281742/huge_avatar",
         "alt": "...",

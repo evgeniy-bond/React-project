@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 
-export default class Artist extends Component {
-
+export default class Album extends Component {
+    static title = 'Album';
+    
     constructor() {
         super()
         this.state = {}
     }
 
     componentDidMount() {
-        fetch('/artists.json')
+        fetch('/albums.json')
             .then(response => response.json())
             .then(data => {
                 let artist;
                 data.forEach(item => {
-                    if (item.artist.toLowerCase() == this.props.params.artist.toLowerCase()) {
+                    if (item.artist.toLowerCase() == this.props.params.artist.toLowerCase() ) {
                         artist = item;
                         this.setState(artist);
                     }
@@ -33,7 +34,7 @@ export default class Artist extends Component {
                         <div className="caption">
                             <h3>{this.state.artist}</h3>
                             <p>
-                                {this.state.description}
+                                {this.state.album}
                             </p>
                             <p>
                                 {this.state.fullInfo}
